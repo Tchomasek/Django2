@@ -27,7 +27,6 @@ class ProductForm(forms.ModelForm):
 
 
 class RawProductForm(forms.Form):
-    id = forms.IntegerField()
     title = forms.CharField(label='')
     description = forms.CharField(required=False, widget=forms.Textarea(attrs={
                                                                             'placeholder': 'placeholder',

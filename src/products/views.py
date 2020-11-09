@@ -16,6 +16,7 @@ def product_update_view(request,id):
     context = {
         'form': form
     }
+    print(context)
     return render(request, 'products/product_create.html', context)
 
 def product_create_view(request):
