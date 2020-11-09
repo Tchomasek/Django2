@@ -1,0 +1,8 @@
+{%extends 'base.html'%}
+
+{%block content%}
+{{object.id}}
+<h1>{{object.title}}</h1>
+<p>{% if object.description %} {{object.description}}  {%else%}no description{%endif%}</p>
+
+{%endblock%}

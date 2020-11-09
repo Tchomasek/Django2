@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<h1>Contact</h1>
+
+<h3>{{title|capfirst|title}}</h3>
+{{my_html|safe}}
+<p>
+{{text}}<br>
+{{number}}<br>
+</p>
+<ul>
+  {% for item in list%}
+  {% if item == 40 %}
+    <li>{{forloop.counter}} - {{item|add:1}}</li>
+  {%elif item == 50%}
+    <li>{{forloop.counter}} - {{item|add:2}}</li>
+  {%else%}
+    <li>{{forloop.counter}} - {{item}}</li>
+  {%endif%}
+
+  {%endfor%}
+</ul>
+{% endblock%}
